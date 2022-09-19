@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz Challenge</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hard<span>Mode</span></h1>
+    </header>
+    <article class="stats hidden">    <!--unhide-->
+      <dl>
+        <dt>Time: </dt>
+        <dd id="timer"> </dd>
+        <dt>Whiffs: </dt>
+        <dd id="whiffs"> </dd>
+        <dt>Score: </dt>
+        <dd id="score"> </dd>
+      </dl>
+    </article>
+    <main>
+        <h3 id="leaderboard"></h3>
+        <button class="start-button" name="start" > <img id="start-image" src="./assets/images/play_128x128x32.png" ></button> <!--hide-->
+          <form class="q-container hidden">    <!--unhide-->
+            <h2 id="question">lorem ipsum qanon amet maga</h2>
+            <menu class="choices">
+               <button id="A" type="button" class="wrong">A:</button> 
+               <button id="B" type="button" class="wrong">B:</button> 
+               <button id="C" type="button" class="wrong">C:</button> 
+               <button id="D" type="button" class="wrong">D:</button> 
+            </menu>
+          </form>
+    </main>
+    <script src="./assets/script.js"></script>
+  </body> 
+</html>
