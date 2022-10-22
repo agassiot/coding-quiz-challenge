@@ -5,33 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz Challenge</title>
-    <link rel="stylesheet" href="./assets/styles.css" />
-  </head>
+<link rel="stylesheet" href="./assets/styles.css" />
+  
+
+</head>
   <body>
+<nav>
     <header>
-      <h1>Hard<span>Mode</span></h1>
+      <h1 style="color:blueviolet">Hard<span style="color:crimson">Mode</span></h1>
     </header>
-    <article class="stats hidden">    <!--unhide-->
-      <dl>
-        <dt>Time: </dt>
-        <dd id="timer"> </dd>
-        <dt>Whiffs: </dt>
-        <dd id="whiffs"> </dd>
-        <dt>Score: </dt>
-        <dd id="score"> </dd>
-      </dl>
+      <ul class="stats hidden">        <!--unhide--> 
+        <li >Time: <span id="timer"> </span></li>
+        <li >Whiffs: <span id="whiffs" style="color:red"> </span></li>
+        <li >Score: <span id="score" style="color:blue"> </span></li>
+      </ul>
+</nav>
+
+    <article id="leaderboard"  >    <!--hide-->
+      <h3 >Player Stats</h3>
+      <ul style="list-style: none">
+        <li><h6 >Player: <span id="initials"> </span></h6></li>
+        <li><h6 >Last Score: <span id="score-recent" style="color:blue"> </span></h6></li>
+        <li><h6 ">Whiffs: <span id="whiffs-recent" style="color:red"> </span></h6></li>
+      </ul>
     </article>
+
     <main>
-        <h3 id="leaderboard"></h3>
-        <button class="start-button" name="start" > <img id="start-image" src="./assets/images/play_128x128x32.png" ></button> <!--hide-->
+      <form id="get-initials" class="hidden" >
+          <ul>
+            <li> <label>Enter your initials:</label> 
+             <input type="text" id="input" > </li><!--unhide-->
+              <li> <input type="submit" id="input-button"></input></li>
+             </ul>
+        </form>
+      
+        <button id="start-button"  name="start" > <img id="start-image" src="./assets/images/play_128x128x32.png" ></button> <!--hide-->
+        
+          <img id="q-img" src=""  class="hidden">
+         
+          
           <form class="q-container hidden">    <!--unhide-->
             <h2 id="question">lorem ipsum qanon amet maga</h2>
-            <menu class="choices">
-               <button id="A" type="button" class="wrong">A:</button> 
-               <button id="B" type="button" class="wrong">B:</button> 
-               <button id="C" type="button" class="wrong">C:</button> 
-               <button id="D" type="button" class="wrong">D:</button> 
+            <menu class="choices ">
+               <button id="A" type="button" class="btn btn-success btn-outline-light btn-lg">A:</button> 
+               <button id="B" type="button" class="btn btn-success btn-outline-light btn-lg">B:</button> 
+               <button id="C" type="button" class="btn btn-success btn-outline-light btn-lg">C:</button> 
+               <button id="D" type="button" class="btn btn-success btn-outline-light btn-lg">D:</button> 
             </menu>
+           
           </form>
     </main>
     <script src="./assets/script.js"></script>
