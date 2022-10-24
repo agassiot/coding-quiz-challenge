@@ -18,3 +18,4 @@
             Github Page https://github.com/agassiot
             Github Repository https://github.com/agassiot/coding-quiz-challenge
             Live Link https://agassiot.github.io/coding-quiz-challenge/
+<img width="1508" alt="hardmode-pic" src="https://user-images.githubusercontent.com/61921580/197538230-517661db-f201-457c-8848-e6c079c3536c.png">
