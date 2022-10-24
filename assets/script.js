@@ -1,32 +1,32 @@
-const startButton = document.querySelector("#start-button");
+const startButton = document.querySelector(".start-button");
 const qcontainer = document.querySelector(".q-container");
 const stats = document.querySelector(".stats");
 const wrongAnswer = document.querySelectorAll(".wrong");
-const startImage = document.querySelector('#start-image');
 //player elements
-const initialsL = document.querySelector('#initials');
-const scoreRecent = document.querySelector('#score-recent');
-const qImg = document.querySelector('#q-img')
-const whiffsRecent = document.querySelector('#whiffs-recent');
-const getInitials = document.querySelector('#get-initials');
+const initialsL = document.querySelector('.initials');
+const scoreRecent = document.querySelector('.score-recent');
+const qImg = document.querySelector('.q-img')
+const whiffsRecent = document.querySelector('.whiffs-recent');
+const getInitials = document.querySelector('.get-initials');
 const input = document.querySelector('#input');
+const maingrid = document.querySelector('#maingrid');
 
 
 
 
 //question container elements
-const questionL = document.querySelector("#question");
+const questionL = document.querySelector(".question");
 const answerA = document.querySelector("#A");
 const answerB = document.querySelector("#B");
 const answerC = document.querySelector("#C");
 const answerD = document.querySelector("#D");
 
 //player stats elements
-const scoreL = document.querySelector("#score");
-const whiffsL = document.querySelector("#whiffs");
-const penaltyL = document.querySelector("penalty");
-const timerL =document.querySelector("#timer");
-const leaderboardL = document.querySelector("#leaderboard");
+const scoreL = document.querySelector(".score");
+const whiffsL = document.querySelector(".whiffs");
+const penaltyL = document.querySelector("#penalty");
+const timerL =document.querySelector(".timer");
+const leaderboardL = document.querySelector(".leaderboard");
 
 var player = {
     name: "na",
@@ -198,7 +198,7 @@ function handleclick(e){
             score += questions[q].points;
             scoreL.textContent = score;
         } else { 
-            
+            displayPenalty();
             whiffs +=1; 
             whiffsL.textContent = whiffs;
             timer.penalize();
@@ -214,6 +214,7 @@ function endGame(){
     clearInterval(intervalID);
     qcontainer.classList.add('hidden');
     stats.classList.add('hidden');
+    qImg.classList.add('hidden')
     getInitials.classList.remove('hidden');
     qcontainer.removeEventListener('click', handleclick);
     getInitials.addEventListener('submit',nameSubmit);
@@ -247,6 +248,13 @@ function displayLeaders (){
     console.log(player);
    
 };
+
+function displayPenalty(){
+    penaltyL.classList.remove('hidden');
+    maingrid.classList.add('penalize');
+    setTimeout(()=>maingrid.classList.remove('penalize'),250);
+    setTimeout(()=>penaltyL.classList.add('hidden'),1500);
+}
 
 function newQuestion(x){
 

@@ -9,52 +9,53 @@
   
 
 </head>
-  <body>
-<nav>
-    <header>
+  <body id="maingrid">
+
+    <header id="gametitle">
       <h1 style="color:blueviolet">Hard<span style="color:crimson">Mode</span></h1>
     </header>
       <ul class="stats hidden">        <!--unhide--> 
-        <li >Time: <span id="timer"> </span></li>
-        <li >Whiffs: <span id="whiffs" style="color:red"> </span></li>
-        <li >Score: <span id="score" style="color:blue"> </span></li>
+        <li >Time: <span class="timer"> </span> <span id="penalty" class="hidden" style="color:rgb(254, 75, 75)"> -5</span></li>
+        <li >Whiffs: <span class="whiffs" style="color:red"> </span></li>
+        <li >Score: <span class="score" style="color:blue"> </span></li>
       </ul>
-</nav>
 
-    <article id="leaderboard"  >    <!--hide-->
+
+    <article class="leaderboard">    <!--hide-->
       <h3 >Player Stats</h3>
-      <ul style="list-style: none">
-        <li><h6 >Player: <span id="initials"> </span></h6></li>
-        <li><h6 >Last Score: <span id="score-recent" style="color:blue"> </span></h6></li>
-        <li><h6 ">Whiffs: <span id="whiffs-recent" style="color:red"> </span></h6></li>
+      <ul class="leaderlist">
+        <li><h6>Player: <span class="initials"> </span></h6></li>
+        <li><h6>Last Score: <span class="score-recent" style="color:blue"> </span></h6></li>
+        <li><h6>Whiffs: <span class="whiffs-recent" style="color:red"> </span></h6></li>
       </ul>
     </article>
 
-    <main>
-      <form id="get-initials" class="hidden" >
-          <ul>
+    <section class="e">
+      <form class="hidden get-initials" >
+          <ul class="form">
             <li> <label>Enter your initials:</label> 
-             <input type="text" id="input" > </li><!--unhide-->
-              <li> <input type="submit" id="input-button"></input></li>
+             <li><input type="text" id="input" > </li><!--unhide-->
+              <li> <input type="submit" class="input-button"></input></li>
              </ul>
         </form>
       
-        <button id="start-button"  name="start" > <img id="start-image" src="./assets/images/play_128x128x32.png" ></button> <!--hide-->
+        <button class="start-button"  name="start" > <img class="start-img" src="./assets/images/play_128x128x32.png" ></button> <!--hide-->
         
-          <img id="q-img" src=""  class="hidden">
-         
-          
+          <img src=""  class="hidden q-img">
+    </section>
+
+    <section class="g">
           <form class="q-container hidden">    <!--unhide-->
-            <h2 id="question">lorem ipsum qanon amet maga</h2>
+            <h2 class="question">lorem ipsum qanon amet maga</h2>
             <menu class="choices ">
-               <button id="A" type="button" class="btn btn-success btn-outline-light btn-lg">A:</button> 
-               <button id="B" type="button" class="btn btn-success btn-outline-light btn-lg">B:</button> 
-               <button id="C" type="button" class="btn btn-success btn-outline-light btn-lg">C:</button> 
-               <button id="D" type="button" class="btn btn-success btn-outline-light btn-lg">D:</button> 
+               <button id="A" type="button" class="btn">A:</button> 
+               <button id="B" type="button" class="btn">B:</button> 
+               <button id="C" type="button" class="btn">C:</button> 
+               <button id="D" type="button" class="btn">D:</button> 
             </menu>
            
           </form>
-    </main>
+    </section>
     <script src="./assets/script.js"></script>
   </body> 
 </html>
