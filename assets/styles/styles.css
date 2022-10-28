@@ -11,7 +11,7 @@
      "d e f"
      "d g f";
     grid-template-rows: 10vh 55vh 25vh;
-    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-columns: 27vw 46vw 27vw;
     background-color: rgb(151, 151, 151);
 }
 
@@ -66,10 +66,51 @@
     margin-top: 5rem;
 }
 
+ul[name="choicegrid"] {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    justify-self: left;
+    align-self: center;
+    align-items: center;
+    vertical-align: middle;
+    
+}
+
+li.padtop {
+    padding-top: 2rem;
+}
+
 .e {
     grid-area: e;
+    width: 100%;
 
 }
+
+.q-img {
+    width: max-content;
+    justify-self: center;
+    align-content: top;
+    padding-top: 1rem;
+}
+
+span[name] {
+    display:  inline-block;
+    width: 40%;
+    height: 40%;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+span.red {
+    color:crimson;
+    text-shadow: 1px 1px rgba(45, 0, 0, 0.809);
+    font-weight: bolder;
+    font-size: large;
+    padding-right: 1rem;
+}
+
+
 
 .g {
     grid-area: g;

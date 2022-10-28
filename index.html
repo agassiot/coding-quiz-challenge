@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz Challenge</title>
-<link rel="stylesheet" href="./assets/styles.css" />
+<link rel="stylesheet" href="./assets/styles/styles.css" />
   
 
 </head>
@@ -39,10 +39,15 @@
              </ul>
         </form>
       
-        <button class="start-button"  name="start" > <img class="start-img" src="./assets/images/play_128x128x32.png" ></button> <!--hide-->
-        
-          <img src=""  class="hidden q-img">
-    </section>
+ <button class="start-button"  name="start" > <img class="start-img" src="./assets/images/play_128x128x32.png" ></button> <!--hide-->
+        <article name="answers" class="hidden">
+          <img src=""  class="q-img">
+          <ul name="choicegrid">
+            <li > <span class="red"> A: </span>   <span name="A"></span> <span class="red"> B: </span> <span name="B"></span> </li>
+            <li class="padtop"> <span class="red"> C: </span>   <span name="C"></span> <span class="red"> D: </span> <span name="D"></span> </li>
+          </ul>
+        </article>
+     </section>
 
     <section class="g">
           <form class="q-container hidden">    <!--unhide-->
@@ -56,6 +61,6 @@
            
           </form>
     </section>
-    <script src="./assets/script.js"></script>
+    <script src="./assets/scripts/script.js"></script>
   </body> 
 </html>
